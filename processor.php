@@ -1,20 +1,20 @@
 <?php
 	include_once('config.php');
 
-	if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['message'])){//if posted data for name,email & message are all set, then and only then the rest of the code below run
-		$n = $_POST['name']; // HINT: use preg_replace() to filter the data
-		$e = $_POST['email'];
-		$p = $_POST['phone'];
-		$m = nl2br($_POST['message']);//change newline to break tags
+	if( isset($_GET['name']) && isset($_GET['email']) && isset($_GET['phone']) && isset($_GET['message'])){//if posted data for name,email & message are all set, then and only then the rest of the code below run
+		$n = $_GET['name']; // HINT: use preg_replace() to filter the data
+		$e = $_GET['email'];
+		$p = $_GET['phone'];
+		$m = nl2br($_GET['message']);//change newline to break tags
 
-		//sanitize all post vars
-		$name=mysqli_real_escape_string($con, $_POST['name']);
+		//sanitize all GET vars
+		$name=mysqli_real_escape_string($con, $_GET['name']);
 		$nameclean=filter_var($name, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-		$email=mysqli_real_escape_string($con, $_POST['email']);
+		$email=mysqli_real_escape_string($con, $_GET['email']);
 		$emailclean=filter_var($email, FILTER_SANITIZE_EMAIL, FILTER_FLAG_STRIP_HIGH);
-		$phone=mysqli_real_escape_string($con, $_POST['phone']);
+		$phone=mysqli_real_escape_string($con, $_GET['phone']);
 		$phoneclean=filter_var($phone, FILTER_SANITIZE_NUMBER_INT, FILTER_FLAG_STRIP_HIGH); 
-		$message=mysqli_real_escape_string($con, $_POST['message']);
+		$message=mysqli_real_escape_string($con, $_GET['message']);
 		$messageclean=filter_var($message, FILTER_SANITIZE_EMAIL, FILTER_FLAG_STRIP_HIGH);
 
 		//insert into database
