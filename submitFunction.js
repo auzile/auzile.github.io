@@ -11,7 +11,7 @@ function submitFunction(){
 	formdata.append("phone", _("phone").value);
 	formdata.append("message", _("message").value);
 	var ajax = new XMLHttpRequest();
-	ajax.open("GET", 'processor.php'); //Want to POST the data to the php script
+	ajax.open("POST", 'https://formspree.io/auzile.green@gmail.com'); //Want to POST the data to the php script
 	ajax.onreadystatechange = function(){
 		if(ajax.readyState == 4 && ajax.status == 200){//The data is finishes processing by PHP and PHP has returned data to the ajax object
 			if(ajax.responseText == "success") {
