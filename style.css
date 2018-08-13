@@ -21,7 +21,7 @@ html,body{
 
 /* For First Carousel */
 #slides .carousel-inner img{
- max-height: 750px;
+ max-height: 850px;
  width: 100%;
 }
 #slides .carousel-caption{
@@ -56,7 +56,7 @@ html,body{
 /* End For the First Carousel */
 
 .jumbotron{
-  padding:1rem;
+  padding:0rem;
   border-radius:0;
 }
 
@@ -121,14 +121,17 @@ span.status{
 
 /* Card section */
 .card{
-    height: 450px;
-    width: 100%;
+  height: 500px;
+  width: 100%;
+}
 
+.card-body{
+  align-items: flex-start;
 }
 /* Second Carousel */
 .slick-slide{
-margin-right: 15px;
-margin-left: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .slick-slider{
@@ -138,13 +141,17 @@ margin-left: 15px;
 .slick-prev:before, .slick-next:before { 
     font-family: "slick"; 
     font-size: 100px; 
-    line-height: 0; 
+    line-height: 0;
     color: white; 
     opacity: 0.35; 
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
 }
 
+.slick-prev, .slick-next{
+  top:45%;
+}
+ 
 .slick-next:before {
     content: "›";
 }
@@ -231,17 +238,22 @@ hr.light-100{
       padding-bottom: .2rem;
     }
 
-    .card{
-    height: 600px;
-    width: 100%;
-    }
+    /* Card section */
+.card{
+  height: 100%;
+  width: 100%;
+}
+
+.card-body{
+  align-items: flex-start;
+}
 
     .buttonSubmit{
       left:-18px;
     }
 
 
-  }
+}
 
 
 @media (max-width: 768px) {

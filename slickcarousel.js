@@ -1,13 +1,12 @@
 //Second Carousel JS
 $(document).ready(function(){
   $('.slides2').slick({
-    dots: true,
+    dots: false,
     arrows:true,
     infinite: false,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay:true,
     mobileFirst:true,
     responsive: [
       {
@@ -16,7 +15,7 @@ $(document).ready(function(){
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
